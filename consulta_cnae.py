@@ -28,7 +28,7 @@ if codigo:
     st.success(f"Classes encontradas para o CNAE {codigo}:")
     descricoes = resultados["CNT_Classe"].unique()
     for descricao in descricoes:
-        st.markdown(f"<p style='margin-bottom: 25px;'>• {descricao}</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='margin-bottom: 25px;'>• {descricao}</p>", unsafe_allow_html=True)
 
     else:
         st.warning("Nenhuma classe encontrada para este código CNAE.")
