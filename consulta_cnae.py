@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
 
-# Caminho para o arquivo Excel
-EXCEL_PATH = "CNAEvsCLASSE.xlsx"
+# Caminho correto para o arquivo Excel
+EXCEL_PATH = "CNAEvsCLASSE_app.xlsx"
 
 # Carrega os dados
 df = pd.read_excel(EXCEL_PATH)
@@ -26,8 +26,9 @@ if codigo:
 
     if not resultados.empty:
         st.success(f"Classes encontradas para o CNAE {codigo}:")
-        for _, row in resultados.iterrows():
-            st.markdown(f"• {row['CNT_Classe']}\n")
+        descricoes = resultados["CNT_Classe"].unique()
+        for descricao in descricoes:
+            st.markdown(f"• {descricao}")
     else:
         st.warning("Nenhuma classe encontrada para este código CNAE.")
         st.markdown("<p style='color:gray;'>Verifique se digitou corretamente os 7 números. Exemplo válido: <code>1041400</code>.</p>", unsafe_allow_html=True)
