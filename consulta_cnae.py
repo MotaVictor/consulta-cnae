@@ -27,7 +27,7 @@ if codigo:
     if not resultados.empty:
         st.success(f"Classes encontradas para o CNAE {codigo}:")
         for _, row in resultados.iterrows():
-            st.markdown(f"• {row['CNT_Classe__c']}\n")
+            st.markdown(f"• {row['CNT_Classe']}\n")
     else:
         st.warning("Nenhuma classe encontrada para este código CNAE.")
         st.markdown("<p style='color:gray;'>Verifique se digitou corretamente os 7 números. Exemplo válido: <code>1041400</code>.</p>", unsafe_allow_html=True)
