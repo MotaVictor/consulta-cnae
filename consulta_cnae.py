@@ -13,7 +13,7 @@ st.set_page_config(page_title="Consulta CNAE", layout="centered")
 
 # Título
 st.markdown("""
-    <h1 style='text-align: center; font-size: 2.2em; margin-bottom: 30px;'>🔍 Consulta CNAE x Classe</h1>
+    <h1 style='text-align: center; font-size: 3.2em; margin-bottom: 30px;'>🔍 Consulta CNAE x Classe</h1>
 """, unsafe_allow_html=True)
 
 # Campo de entrada
